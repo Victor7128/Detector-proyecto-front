@@ -1,22 +1,42 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>FraudVision</title>
+    <meta
+      name="description"
+      content="FraudVision es una pagina web creada para detectar posibles transacciones falsas mediante filtros inteligentes."
+    />
+  </head>
+  <body>
+    <div
+      class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
+    >
+    </div>
+    <Header />
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  img{
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+  }
 </style>
